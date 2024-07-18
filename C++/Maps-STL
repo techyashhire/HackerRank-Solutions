@@ -1,0 +1,38 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <map>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    map<string,int>m;
+    int type,n,mark;
+    string name;
+    cin>>n;
+    for(int  i=0;i<n;i++)
+    {
+        cin>>type;
+        if(type==1)
+        {
+            cin>>name;
+            cin>>mark;
+            m[name]=m[name]+mark;
+        }
+        if(type==2)
+        {
+            cin>>name;
+            m.erase(name);
+        }
+        if(type==3)
+        {
+            cin>>name;
+            cout<<m[name]<<endl;
+        }
+    }
+    return 0;
+}
